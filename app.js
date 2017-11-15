@@ -11,6 +11,7 @@ var methodOverride          = require("method-override");
 // END MODULE VARIABLES
 
 // REQUIRING ROUTES
+var indexRoutes             = require("./routes/index");
 // END REQUIRING ROUTES
 
 // MODELS
@@ -51,6 +52,7 @@ app.use(function(req, res, next){
 
 
 // USE ROUTES
+app.use("/", indexRoutes);
 // END USE ROUTES
 
 // SEED THE DB
