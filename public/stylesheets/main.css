@@ -1,4 +1,13 @@
+:root {
+    --main-bg-colour: #343a40;
+    --main-fg-colour: #CBC5BF;
+}
+
 body, html {
-  background-color: #343a40;
-  color: #CBC5BF;
+  background-color: var(--main-bg-colour);
+  color: var(--main-fg-colour);
+}
+
+.jumbotron {
+    color: var(--main-bg-colour);
 }
