@@ -1,0 +1,68 @@
+// =============================
+//      GENERAL CONFIG
+// =============================
+// MODULE VARIABLES
+var express                 = require("express");
+var bodyParser              = require("body-parser");
+var flash                   = require("connect-flash");
+var passport                = require("passport");
+var LocalStrat              = require("passport-local");
+var methodOverride          = require("method-override");
+// END MODULE VARIABLES
+
+// REQUIRING ROUTES
+// END REQUIRING ROUTES
+
+// MODELS
+// END MODELS
+
+// APP CONFIG
+var app = express();
+app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/public"));
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(methodOverride("_method"));
+app.use(flash());
+app.locals.moment = require("moment");
+// END APP CONFIG
+
+// PASSPORT CONFIG
+// app.use(require("express-session")({
+//     secret: "monkeygerbil piratemeat pantherdestiny",
+//     resave: false,
+//     saveUninitialized: false
+// }));
+//
+// app.use(passport.initialize());
+// app.use(passport.session());
+// passport.use(new LocalStrat(User.authenticate()));
+// passport.serializeUser(User.serializeUser());
+// passport.deserializeUser(User.deserializeUser());
+// END PASSPORT CONFIG
+
+// GLOBALS
+app.use(function(req, res, next){
+   res.locals.currentUser = req.user;
+   res.locals.error = req.flash("error");
+   res.locals.success = req.flash("success");
+   next();
+});
+// END GLOBALS
+
+
+// USE ROUTES
+// END USE ROUTES
+
+// SEED THE DB
+// seedDB();
+// END SEED
+
+
+
+// =============================
+//      LISTENER
+// =============================
+app.listen(process.env.PORT, process.env.IP, function() {
+    console.log("msi_node server is up...");
+});
+// END LISTENER
