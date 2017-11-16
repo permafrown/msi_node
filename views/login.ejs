@@ -1,11 +1,25 @@
 <% include ./partials/head %>
 
 <div class="container">
-  <div class="jumbotron">
-      <h1 class="display-3">Login to perma<i class="fa fa-ravelry" aria-hidden="true"></i>bolt</h1>
-      <p class="lead">I already told you..</p>
-      <hr class="my-4" />
-      <p>it is a silly place; you'll fit right in...</p>
+    <div class="jumbotron">
+        <h1 class="display-3">Login to perma<i class="fa fa-ravelry" aria-hidden="true"></i>bolt</h1>
+        <form>
+            <div class="form-group">
+                <label for="emailInput">Email address</label>
+                <input type="email" class="form-control" id="emailInput" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="pwInput">Password</label>
+                <input type="password" class="form-control" id="pwInput" name="pw" placeholder="Password">
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">Remember Me
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
       <p class="lead">
           <a class="btn btn-dark btn-lg" href="/" role="button">Back</a>
       </p>
