@@ -4,13 +4,13 @@ var router      = express.Router();
 
 // ROOT ROUTE
 router.get("/", function(req, res){
-    res.render('index');
+    res.render("index", {page: 'home'});
 });
 // END ROOT ROUTE
 
 // ABOUT ROUTE
 router.get("/about", function(req, res) {
-    res.render('about');
+    res.render("about", {page: 'about'});
 });
 // END ABOUT ROUTE
 
