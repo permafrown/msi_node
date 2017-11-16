@@ -1,25 +1,33 @@
 <% include ./partials/head %>
 
 <div class="container">
-  <div class="jumbotron">
-      <h1 class="display-3">Sign up for perma<i class="fa fa-ravelry" aria-hidden="true"></i>bolt</h1>
-      <hr class="my-4" />
-      <form>
-          <div class="form-group">
-              <label for="emailInput">Email address</label>
-              <input type="email" class="form-control" id="emailInput" name="email" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-              <label for="pwInput">Password</label>
-              <input type="password" class="form-control" id="pwInput" name="pw" placeholder="Password">
-          </div>
-          <button type="submit" class="btn btn-primary">Sign Up</button>
-      </form>
-      <p class="lead">
-          <a class="btn btn-dark btn-lg" href="/" role="button">Back</a>
-      </p>
-  </div>
+    <div class="jumbotron">
+        <h1 class="display-3">Sign up for perma<i class="fa fa-ravelry" aria-hidden="true"></i>bolt</h1>
+        <hr class="my-4" />
+        <form>
+            <div class="form-group">
+                <label for="emailInput">Email address</label>
+                <input type="email" class="form-control" id="emailInput" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="pwInput">Password</label>
+                <input type="password" class="form-control" id="pwInput" name="pw" placeholder="Password">
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">Remember Me
+                </label>
+            </div>
+            <div class="btn-group" role="group" aria-label="buttonGroup">
+                <button type="submit" class="btn btn-dark btn-lg">Sign Up</button>
+                <p class="lead">
+                    <a class="btn btn-dark btn-lg" href="/" role="button">Back</a>
+                </p>
+            </div>
+        </form>
+        <hr class="my-4" />
+    </div>
 </div>
 
 <% include ./partials/foot %>
