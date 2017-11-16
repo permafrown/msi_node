@@ -8,6 +8,11 @@ body, html {
   color: var(--main-fg-colour);
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .jumbotron {
     color: var(--main-bg-colour);
 }
