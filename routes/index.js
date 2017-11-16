@@ -8,4 +8,10 @@ router.get("/", function(req, res){
 });
 // END ROOT ROUTE
 
+// ABOUT ROUTE
+router.get("/about", function(req, res) {
+    res.render('about');
+});
+// END ABOUT ROUTE
+
 module.exports = router;
