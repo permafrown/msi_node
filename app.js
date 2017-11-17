@@ -39,7 +39,9 @@ var db = mysql.createConnection({
 db.connect();
 
 db.query('SELECT * FROM users', function(err, rows, fields) {
-    if (err) throw err;
+    if (err) {
+        console.log(err);
+    }
     console.log(rows[0]);
 });
 connection.end();
