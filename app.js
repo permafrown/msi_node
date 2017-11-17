@@ -29,22 +29,27 @@ app.locals.moment = require("moment");
 // END APP CONFIG
 
 // DB CONFIG
-var db = mysql.createConnection({
+var connection = mysql.createConnection({
     host: 'localhost:3306',
     user: 'bolt_dbU',
     password: 'eJ4%7y4x',
     database: 'bolt_DB'
 });
 
-db.connect();
-
-db.query('SELECT * FROM users', function(err, rows, fields) {
-    if (err) {
-        console.log(err);
-    }
-    console.log(rows[0]);
+connection.connect(function(err) {
+    if (err) throw err;
+    console.log("You are connected to the DB");
 });
-db.end();
+
+// connection.query('SELECT * FROM users', function(err, rows, fields) {
+//     if (err) {
+//         console.log("something broke with the query...");
+//         console.log(err);
+//     }
+//     console.log(rows[0]);
+// });
+
+connection.end();
 // END DB CONFIG
 
 // PASSPORT CONFIG
