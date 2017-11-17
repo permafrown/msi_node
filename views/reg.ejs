@@ -33,5 +33,10 @@
     </div>
 </div>
 
-<script src="../db.js"></script>
+<%=
+db.query("SELECT * FROM `users`", function(err, result, fields) {
+     if (err) throw err;
+     console.log(result);
+ });
+%>
 <% include ./partials/foot %>
