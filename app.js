@@ -49,7 +49,7 @@ app.locals.moment = require("moment");
 //     console.log(rows[0]);
 // });
 
-connection.end();
+// connection.end();
 // END DB CONFIG
 
 // PASSPORT CONFIG
