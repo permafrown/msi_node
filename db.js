@@ -1,6 +1,3 @@
-var express = require("express");
-var mysql   = require("mysql");
-
 // DB CONFIG
 var connection = mysql.createConnection({
     host: 'localhost:3306',
