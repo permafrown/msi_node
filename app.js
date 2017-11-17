@@ -33,7 +33,7 @@ var db = mysql.createConnection({
     host: 'localhost:3306',
     user: 'bolt_dbU',
     password: 'eJ4%7y4x',
-
+    database: 'bolt_DB'
 });
 
 db.connect();
@@ -44,7 +44,7 @@ db.query('SELECT * FROM users', function(err, rows, fields) {
     }
     console.log(rows[0]);
 });
-connection.end();
+db.end();
 // END DB CONFIG
 
 // PASSPORT CONFIG
