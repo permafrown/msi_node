@@ -34,12 +34,12 @@ var connection = mysql.createConnection({
     user: 'bolt_dbU',
     password: 'eJ4%7y4x',
     database: 'bolt_DB'
-});
+})
 
 connection.connect(function(err) {
-    if (err) throw err;
-    console.log("You are connected to the DB");
-});
+    if (err) throw err
+    console.log("You are connected to the DB")
+})
 
 // connection.query('SELECT * FROM users', function(err, rows, fields) {
 //     if (err) {
