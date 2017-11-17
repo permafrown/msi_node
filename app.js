@@ -28,14 +28,10 @@ db.connect(function(err) {
         console.log("the db connection failed");
     }
     console.log("the db connection was successful");
-});
-
-db.query('SELECT * FROM users', function(err, rows, fields) {
-    if (err) {
-        console.log("something broke with the query...");
-        console.log(err);
-    }
-    console.log(rows[0]);
+    db.query("SELECT * FROM `users`", function(err, result, fields) {
+        if (err) throw err;
+        console.log(result);
+    });
 });
 
 db.end();
