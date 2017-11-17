@@ -1,0 +1,18 @@
+<% include ./partials/head %>
+
+<div class="container">
+  <div class="jumbotron">
+      <h1 class="display-3">perma<i class="fa fa-ravelry" aria-hidden="true"></i>bolt DB</h1>
+      <p class="lead">here's some data</p>
+      <hr class="my-4" />
+          <% users.forEach(function(user) {%>
+              <p><%= echo user %></p>
+          <% }) %>
+      </p>
+      <p class="lead">
+          <a class="btn btn-dark btn-lg" href="/" role="button">back</a>
+      </p>
+  </div>
+</div>
+
+<% include ./partials/foot %>
