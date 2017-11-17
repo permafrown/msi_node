@@ -8,6 +8,7 @@ var flash                   = require("connect-flash");
 var passport                = require("passport");
 var LocalStrat              = require("passport-local");
 var methodOverride          = require("method-override");
+var mysql                   = require("mysql");
 // END MODULE VARIABLES
 
 // REQUIRING ROUTES
@@ -26,6 +27,23 @@ app.use(methodOverride("_method"));
 app.use(flash());
 app.locals.moment = require("moment");
 // END APP CONFIG
+
+// DB CONFIG
+var db = mysql.createConnection({
+    host: 'localhost:3306',
+    user: 'bolt_dbU',
+    password: 'eJ4%7y4x',
+
+});
+
+db.connect();
+
+db.query('SELECT * FROM users', function(err, rows, fields) {
+    if (err) throw err;
+    console.log(rows[0]);
+});
+connection.end();
+// END DB CONFIG
 
 // PASSPORT CONFIG
 // app.use(require("express-session")({
