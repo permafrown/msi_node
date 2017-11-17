@@ -22,6 +22,7 @@ var db = mysql.createConnection({
     password: 'eJ4%7y4x',
     database: 'bolt_DB'
 })
+module.exports = db;
 
 db.connect(function(err) {
     if (err) {
@@ -30,7 +31,7 @@ db.connect(function(err) {
     console.log("the db connection was successful");
 });
 
-db.end();
+// db.end();
 // END DB CONFIG
 
 // MODELS
@@ -72,6 +73,16 @@ app.use(function(req, res, next){
 
 // USE ROUTES
 app.use("/", indexRoutes);
+
+app.get('/db', function(req, res) {
+    db.query('SELECT * FROM users', function(err, rows) {
+        if(err) {
+            console.log(err);
+        } else {
+            res.render('db', {users: rows});
+        }
+    });
+});
 // END USE ROUTES
 
 // SEED THE DB
