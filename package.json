@@ -27,7 +27,7 @@
     "method-override": "^2.3.10",
     "moment": "^2.29.4",
     "mysql": "^2.15.0",
-    "passport": "^0.4.0",
+    "passport": "^0.6.0",
     "passport-local": "^1.0.0"
   }
 }
